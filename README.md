@@ -71,9 +71,9 @@ This project depends on mainstream libraries, for plotting, modeling and data ma
 ##### Streamlit app
 
 To use the streamlit app, use the command 
-```bash
-streamlit run ./Streamlit/streamlit_board.py
-```
+    ```bash
+    streamlit run ./Streamlit/streamlit_board.py
+    ```
 
 ##### Notebook
 
