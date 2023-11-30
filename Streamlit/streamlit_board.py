@@ -15,9 +15,9 @@ from xgboost import XGBRegressor
 from sklearn.model_selection import train_test_split
 from model_recaps import models_info
 
-df_base = pd.read_csv('https://raw.githubusercontent.com/ClementFrvl/Datasets/main/data.csv', sep=';')
-df = pd.read_csv('https://raw.githubusercontent.com/ClementFrvl/Datasets/main/data_filtered.csv')
-df_model = pd.read_csv('https://raw.githubusercontent.com/ClementFrvl/Datasets/main/data_modeling.csv')
+df_base = pd.read_csv('https://raw.githubusercontent.com/ClementFrvl/DataAnalysisProject/main/Datasets/data.csv', sep=';')
+df = pd.read_csv('https://raw.githubusercontent.com/ClementFrvl/DataAnalysisProject/main/Datasets/data_filtered.csv')
+df_model = pd.read_csv('https://raw.githubusercontent.com/ClementFrvl/DataAnalysisProject/main/Datasets/data_modeling.csv')
 
 # Numerical columns
 base_num_cols = df_base.select_dtypes(include=['number']).columns.tolist()
@@ -46,7 +46,7 @@ with (placeholder.container()):
     col_0, col_01 = st.columns(2)
     col_0.subheader("Variable distribution")
     col_01.subheader("Variable correlation to target")
-    select_0 = col_0.selectbox("Base variable distribution", df_base.columns.tolist(), index=0)
+    select_0 = col_0.selectbox("Base variable distribution", df_base.columns.tolist(), index=1)
     select_01 = col_01.selectbox("Base variable correlation", base_num_cols, index=5)
 
     fig_col0, fig_col01 = st.columns(2)
